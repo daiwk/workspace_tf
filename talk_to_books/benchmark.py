@@ -10,6 +10,9 @@ import pandas as pd
 import re
 import seaborn as sns
 
+# Import the Universal Sentence Encoder's TF Hub module
+embed = hub.Module("https://tfhub.dev/google/universal-sentence-encoder/1")
+
 def load_sts_dataset(filename):
   # Loads a subset of the STS dataset into a DataFrame. In particular both
   # sentences and their human rated similarity score.
